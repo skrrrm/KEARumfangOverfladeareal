@@ -16,5 +16,27 @@ namespace KEARumfangOverfladeareal
         {
             InitializeComponent();
         }
+        // Variabler
+        double h, w, l, volume, area;
+
+        private void buttonCalculate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                h = Convert.ToDouble(textBoxHight.Text); // Konvertere textbox til en double, så der kan regnes på det, da det jo er en string
+                w = Convert.ToDouble(textBoxWidth.Text); // --------- || ---------
+                l = Convert.ToDouble(textBoxLength.Text);
+            }
+            catch
+            {
+                labelError.Text = "Only use numbers.";
+            }
+
+            volume = h * w * l;
+            area = 2 * (l * h + h * w + w * l);
+            textBoxVolume.Text = Convert.ToString(volume);
+            textBoxSurfaceArea.Text = Convert.ToString(area);
+
+        }
     }
 }
