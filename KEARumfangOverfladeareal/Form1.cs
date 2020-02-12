@@ -21,20 +21,21 @@ namespace KEARumfangOverfladeareal
 
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
-            try
+            try // Error text if wrong input - i.e. digits#
             {
-                h = Convert.ToDouble(textBoxHight.Text); // Konvertere textbox til en double, så der kan regnes på det, da det jo er en string
+                h = Convert.ToDouble(textBoxHight.Text); // Converts input in textbox to number
                 w = Convert.ToDouble(textBoxWidth.Text); // --------- || ---------
                 l = Convert.ToDouble(textBoxLength.Text);
             }
             catch
             {
-                labelError.Text = "Only use numbers.";
+                labelError.Text = "Only use numbers."; // error
             }
 
-            volume = h * w * l;
-            area = 2 * (l * h + h * w + w * l);
-            textBoxVolume.Text = Convert.ToString(volume);
+            volume = h * w * l; // Volume formula
+            area = 2 * (l * h + h * w + w * l); // surface area formula
+            
+            textBoxVolume.Text = Convert.ToString(volume); // converts results from above formulas to text and prints in corresponding boxes
             textBoxSurfaceArea.Text = Convert.ToString(area);
 
         }
