@@ -42,6 +42,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.buttonCalculate = new System.Windows.Forms.Button();
             this.labelError = new System.Windows.Forms.Label();
+            this.labelBig = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -138,7 +139,7 @@
             // 
             // buttonCalculate
             // 
-            this.buttonCalculate.Location = new System.Drawing.Point(437, 449);
+            this.buttonCalculate.Location = new System.Drawing.Point(424, 304);
             this.buttonCalculate.Name = "buttonCalculate";
             this.buttonCalculate.Size = new System.Drawing.Size(162, 49);
             this.buttonCalculate.TabIndex = 11;
@@ -154,12 +155,21 @@
             this.labelError.Size = new System.Drawing.Size(0, 25);
             this.labelError.TabIndex = 12;
             // 
+            // labelBig
+            // 
+            this.labelBig.AutoSize = true;
+            this.labelBig.Location = new System.Drawing.Point(431, 451);
+            this.labelBig.Name = "labelBig";
+            this.labelBig.Size = new System.Drawing.Size(0, 25);
+            this.labelBig.TabIndex = 13;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(2015, 1289);
+            this.Controls.Add(this.labelBig);
             this.Controls.Add(this.labelError);
             this.Controls.Add(this.buttonCalculate);
             this.Controls.Add(this.label1);
@@ -197,6 +207,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonCalculate;
         private System.Windows.Forms.Label labelError;
+        private System.Windows.Forms.Label labelBig;
     }
 }
 
