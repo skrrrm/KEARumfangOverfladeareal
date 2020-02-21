@@ -46,9 +46,9 @@ namespace KEARumfangOverfladeareal
             textBoxVolume.Text = Convert.ToString(volume); // converts results from above formulas to text and prints in corresponding boxes
             textBoxSurfaceArea.Text = Convert.ToString(area);
 
-            if (volume > 100)
+            if (volume > 100) // If volume is bigger than hundred
                 labelBig.Text = "The box is really big!";
-            else
+            else if (volume < 100) // if volume is smaller than hundred
                 labelBig.Text = "The box is really small!";
         }
     }
